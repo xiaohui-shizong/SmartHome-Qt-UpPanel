@@ -12,5 +12,5 @@
 4. 配套自定义虚拟键盘、二维码生成工具、界面图片资源库
 ## 运行步骤
 1. 克隆仓库：git clone https://github.com/xiaohui-shizong/SmartHome-Qt-UpPanel.git
-2. Qt Creator打开 SmartHome.pro 工程文件
+2. linux虚拟机下使用Qt Creator打开 SmartHome.pro 工程文件
 3. 串口连接STM32 A7开发板，配置MQTT服务参数后编译运行
