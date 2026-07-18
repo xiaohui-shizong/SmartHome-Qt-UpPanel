@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file alias="fsmpKeyboard/ziku/ziku.dat">../fsmpKeyboard/ziku/ziku.dat</file>
+    </qresource>
+</RCC>
