@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AiPage</class>
+ <widget class="QWidget" name="AiPage">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>AI助手</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+QWidget#AiPage{background-color: #F5F0FF;}
+QPushButton{background-color:#7C3AED; color:white; border:none; border-radius:8px; font-size:14px; padding:8px;}
+QPushButton:hover{background-color:#6D28D9;}
+QPushButton:pressed{background-color:#5B21B6;}
+QLineEdit{border:2px solid #C4B5FD; border-radius:8px; background:white; padding:6px; font-size:14px;}
+QTextEdit{border:2px solid #C4B5FD; border-radius:8px; background:white; padding:6px; font-size:13px;}
+QLabel{font-size:13px; color:#5B21B6;}
+   </string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>20</y>
+     <width>80</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>用户</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>50</y>
+     <width>300</width>
+     <height>120</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>在此输入您的问题...</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignTop|Qt::AlignLeft</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>185</y>
+     <width>130</width>
+     <height>45</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>发送</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>20</y>
+     <width>80</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>管家</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="textEdit">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>50</y>
+     <width>400</width>
+     <height>250</height>
+    </rect>
+   </property>
+   <property name="readOnly">
+    <bool>true</bool>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

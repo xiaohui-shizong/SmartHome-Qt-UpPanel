@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>HardwarePage</class>
+ <widget class="QWidget" name="HardwarePage">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1022</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>智能硬件控制</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+QWidget#HardwarePage{background-color: #F5F7FA;}
+QPushButton{background-color:#4A90D9; color:white; border:none; border-radius:6px; font-size:13px; padding:6px 12px;}
+QPushButton:hover{background-color:#357ABD;}
+QPushButton:pressed{background-color:#2A5F9E;}
+QPushButton#btn_alarm_on{background-color:#E74C3C;}
+QPushButton#btn_alarm_off{background-color:#95A5A6;}
+QPushButton#btn_autoMode{background-color:#27AE60;}
+QPushButton#btn_autoMode[checked=true]{background-color:#E67E22;}
+QLabel{font-size:12px; color:#333;}
+QDoubleSpinBox{font-size:12px; border:1px solid #ccc; border-radius:4px; padding:2px; min-width:60px;}
+QSlider::groove:horizontal{background:#ddd; height:8px; border-radius:4px;}
+QSlider::handle:horizontal{background:#4A90D9; width:16px; border-radius:8px;}
+QGroupBox{font-size:13px; font-weight:bold; color:#2C3E50; border:1px solid #BDC3C7; border-radius:8px; margin-top:10px; padding-top:8px;}
+QGroupBox::title{subcontrol-origin:margin; left:10px; padding:0 5px;}
+QRadioButton{font-size:12px;}
+   </string>
+  </property>
+  <widget class="QGroupBox" name="groupBox_env">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>201</width>
+     <height>200</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string> 环境监测 </string>
+   </property>
+   <widget class="QLabel" name="label_temp">
+    <property name="geometry">
+     <rect>
+      <x>15</x>
+      <y>28</y>
+      <width>55</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>温度(℃)</string>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="spin_temp">
+    <property name="geometry">
+     <rect>
+      <x>75</x>
+      <y>26</y>
+      <width>70</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+    <property name="decimals">
+     <number>1</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_hum">
+    <property name="geometry">
+     <rect>
+      <x>15</x>
+      <y>62</y>
+      <width>55</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>湿度(%)</string>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="spin_hum">
+    <property name="geometry">
+     <rect>
+      <x>75</x>
+      <y>60</y>
+      <width>101</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+    <property name="decimals">
+     <number>1</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_light">
+    <property name="geometry">
+     <rect>
+      <x>15</x>
+      <y>96</y>
+      <width>40</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>照度</string>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="spin_light">
+    <property name="geometry">
+     <rect>
+      <x>75</x>
+      <y>94</y>
+      <width>101</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+    <property name="decimals">
+     <number>0</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_pir">
+    <property name="geometry">
+     <rect>
+      <x>15</x>
+      <y>130</y>
+      <width>50</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>-1</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: #4A90D9;</string>
+    </property>
+    <property name="text">
+     <string>没人</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_pirTitle">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>132</y>
+      <width>40</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>人体</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_device">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>10</y>
+     <width>200</width>
+     <height>200</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string> 设备控制 </string>
+   </property>
+   <widget class="QPushButton" name="btn_led">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>28</y>
+      <width>160</width>
+      <height>38</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>全部开灯</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_camera">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>74</y>
+      <width>76</width>
+      <height>34</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>打开摄像</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_playSong">
+    <property name="geometry">
+     <rect>
+      <x>104</x>
+      <y>74</y>
+      <width>76</width>
+      <height>34</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>播放歌曲</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_vibrator">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>116</y>
+      <width>76</width>
+      <height>34</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>振动马达</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radioBeeper">
+    <property name="geometry">
+     <rect>
+      <x>104</x>
+      <y>118</y>
+      <width>76</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>蜂鸣器</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_fan">
+    <property name="geometry">
+     <rect>
+      <x>15</x>
+      <y>156</y>
+      <width>35</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>风扇</string>
+    </property>
+   </widget>
+   <widget class="QSlider" name="slider_fan">
+    <property name="geometry">
+     <rect>
+      <x>55</x>
+      <y>158</y>
+      <width>135</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_camera">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>10</y>
+     <width>360</width>
+     <height>200</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string> 摄像头 / 舵机控制 </string>
+   </property>
+   <widget class="QLabel" name="label_camPreview">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>26</y>
+      <width>170</width>
+      <height>120</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border:2px solid #BDC3C7; background:white;</string>
+    </property>
+    <property name="text">
+     <string>摄像头画面</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_doorOpen">
+    <property name="geometry">
+     <rect>
+      <x>15</x>
+      <y>28</y>
+      <width>75</width>
+      <height>36</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>开门</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_doorClose">
+    <property name="geometry">
+     <rect>
+      <x>95</x>
+      <y>28</y>
+      <width>75</width>
+      <height>36</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>关门</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_dryClothes">
+    <property name="geometry">
+     <rect>
+      <x>15</x>
+      <y>72</y>
+      <width>75</width>
+      <height>36</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>晾衣服</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_collectClothes">
+    <property name="geometry">
+     <rect>
+      <x>95</x>
+      <y>72</y>
+      <width>75</width>
+      <height>36</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>收衣服</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_servoStatus">
+    <property name="geometry">
+     <rect>
+      <x>15</x>
+      <y>115</y>
+      <width>155</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: #27AE60; font-size:11px;</string>
+    </property>
+    <property name="text">
+     <string>舵机状态: 待命</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_camStatus">
+    <property name="geometry">
+     <rect>
+      <x>185</x>
+      <y>152</y>
+      <width>165</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: #888; font-size:11px;</string>
+    </property>
+    <property name="text">
+     <string>监控状态: 未启动</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_alarm">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>218</y>
+     <width>250</width>
+     <height>141</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string> 自动报警设置 </string>
+   </property>
+   <widget class="QLabel" name="label_tempThresh">
+    <property name="geometry">
+     <rect>
+      <x>15</x>
+      <y>26</y>
+      <width>100</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>温度报警阈值(℃)</string>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="spin_tempThreshold">
+    <property name="geometry">
+     <rect>
+      <x>125</x>
+      <y>24</y>
+      <width>66</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="decimals">
+     <number>1</number>
+    </property>
+    <property name="minimum">
+     <double>20.000000000000000</double>
+    </property>
+    <property name="maximum">
+     <double>50.000000000000000</double>
+    </property>
+    <property name="value">
+     <double>35.000000000000000</double>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_humThresh">
+    <property name="geometry">
+     <rect>
+      <x>15</x>
+      <y>56</y>
+      <width>100</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>湿度报警阈值(%)</string>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="spin_humThreshold">
+    <property name="geometry">
+     <rect>
+      <x>125</x>
+      <y>54</y>
+      <width>66</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="decimals">
+     <number>1</number>
+    </property>
+    <property name="minimum">
+     <double>40.000000000000000</double>
+    </property>
+    <property name="maximum">
+     <double>99.000000000000000</double>
+    </property>
+    <property name="value">
+     <double>80.000000000000000</double>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_alarmOn">
+    <property name="geometry">
+     <rect>
+      <x>15</x>
+      <y>88</y>
+      <width>100</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>开启自动报警</string>
+    </property>
+    <property name="checkable">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_alarmStatus">
+    <property name="geometry">
+     <rect>
+      <x>122</x>
+      <y>92</y>
+      <width>118</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: #E74C3C; font-size:11px; font-weight:bold;</string>
+    </property>
+    <property name="text">
+     <string>报警: 关闭</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_auto">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>218</y>
+     <width>260</width>
+     <height>141</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string> 自动化联动 </string>
+   </property>
+   <widget class="QPushButton" name="btn_autoMode">
+    <property name="geometry">
+     <rect>
+      <x>15</x>
+      <y>26</y>
+      <width>115</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>开启自动模式</string>
+    </property>
+    <property name="checkable">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_autoStatus">
+    <property name="geometry">
+     <rect>
+      <x>138</x>
+      <y>30</y>
+      <width>112</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: #27AE60; font-size:11px; font-weight:bold;</string>
+    </property>
+    <property name="text">
+     <string>自动模式: 关闭</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_autoInfo">
+    <property name="geometry">
+     <rect>
+      <x>15</x>
+      <y>64</y>
+      <width>230</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: #666; font-size:10px; background:#EBF5FB; border-radius:4px; padding:4px;</string>
+    </property>
+    <property name="text">
+     <string>自动模式规则:
+• 温度超标→自动通风
+• 湿度超标→自动晾衣
+• 检测到人→自动开监控</string>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_log">
+   <property name="geometry">
+    <rect>
+     <x>540</x>
+     <y>218</y>
+     <width>250</width>
+     <height>141</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string> 运行日志 </string>
+   </property>
+   <widget class="QLabel" name="label_log">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>24</y>
+      <width>230</width>
+      <height>96</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: #333; font-size:10px; background:#FAFAFA; border:1px solid #EEE; border-radius:3px; padding:3px;</string>
+    </property>
+    <property name="text">
+     <string>系统就绪，等待操作...</string>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QLabel" name="label_time">
+   <property name="geometry">
+    <rect>
+     <x>650</x>
+     <y>455</y>
+     <width>140</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: #999; font-size:11px;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
