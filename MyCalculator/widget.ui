@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>widget</class>
+ <widget class="QWidget" name="widget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Modern Calculator</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="spacing">
+    <number>10</number>
+   </property>
+   <property name="leftMargin">
+    <number>20</number>
+   </property>
+   <property name="topMargin">
+    <number>20</number>
+   </property>
+   <property name="rightMargin">
+    <number>20</number>
+   </property>
+   <property name="bottomMargin">
+    <number>20</number>
+   </property>
+
+   <!-- 显示框 -->
+   <item>
+    <widget class="QLineEdit" name="lineEdit">
+     <property name="minimumSize">
+      <size><width>0</width><height>80</height></size>
+     </property>
+     <property name="font">
+      <font><pointsize>30</pointsize></font>
+     </property>
+     <property name="alignment">
+      <enum>Qt::AlignRight|Qt::AlignVCenter</enum>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+
+   <!-- 按钮网格 -->
+   <item>
+    <layout class="QGridLayout" name="gridLayout">
+     <property name="spacing">
+      <number>10</number>
+     </property>
+
+     <!-- Row 0: 高级运算 -->
+     <item row="0" column="0"><widget class="QPushButton" name="pushButton_19"><property name="text"><string>%</string></property></widget></item>
+     <item row="0" column="1"><widget class="QPushButton" name="pushButton_20"><property name="text"><string>√</string></property></widget></item>
+     <item row="0" column="2"><widget class="QPushButton" name="pushButton_21"><property name="text"><string>x²</string></property></widget></item>
+     <item row="0" column="3"><widget class="QPushButton" name="pushButton_22"><property name="text"><string>1/x</string></property></widget></item>
+
+     <!-- Row 1: 清除与除法 -->
+     <item row="1" column="0"><widget class="QPushButton" name="pushButton_16"><property name="text"><string>CE</string></property></widget></item>
+     <item row="1" column="1"><widget class="QPushButton" name="pushButton_15"><property name="text"><string>C</string></property></widget></item>
+     <item row="1" column="2"><widget class="QPushButton" name="pushButton_17"><property name="text"><string>⌫</string></property></widget></item>
+     <item row="1" column="3"><widget class="QPushButton" name="pushButton_14"><property name="text"><string>/</string></property></widget></item>
+
+     <!-- Row 2: 7 8 9 * -->
+     <item row="2" column="0"><widget class="QPushButton" name="pushButton_7"><property name="text"><string>7</string></property></widget></item>
+     <item row="2" column="1"><widget class="QPushButton" name="pushButton_8"><property name="text"><string>8</string></property></widget></item>
+     <item row="2" column="2"><widget class="QPushButton" name="pushButton_9"><property name="text"><string>9</string></property></widget></item>
+     <item row="2" column="3"><widget class="QPushButton" name="pushButton_18"><property name="text"><string>*</string></property></widget></item>
+
+     <!-- Row 3: 4 5 6 - -->
+     <item row="3" column="0"><widget class="QPushButton" name="pushButton_4"><property name="text"><string>4</string></property></widget></item>
+     <item row="3" column="1"><widget class="QPushButton" name="pushButton_5"><property name="text"><string>5</string></property></widget></item>
+     <item row="3" column="2"><widget class="QPushButton" name="pushButton_6"><property name="text"><string>6</string></property></widget></item>
+     <item row="3" column="3"><widget class="QPushButton" name="pushButton_13"><property name="text"><string>-</string></property></widget></item>
+
+     <!-- Row 4: 1 2 3 + -->
+     <item row="4" column="0"><widget class="QPushButton" name="pushButton_1"><property name="text"><string>1</string></property></widget></item>
+     <item row="4" column="1"><widget class="QPushButton" name="pushButton_2"><property name="text"><string>2</string></property></widget></item>
+     <item row="4" column="2"><widget class="QPushButton" name="pushButton_3"><property name="text"><string>3</string></property></widget></item>
+     <item row="4" column="3"><widget class="QPushButton" name="pushButton_12"><property name="text"><string>+</string></property></widget></item>
+
+     <!-- Row 5: 0 . = -->
+     <item row="5" column="0" colspan="2"><widget class="QPushButton" name="pushButton_0"><property name="text"><string>0</string></property></widget></item>
+     <item row="5" column="2"><widget class="QPushButton" name="pushButton_10"><property name="text"><string>.</string></property></widget></item>
+     <item row="5" column="3"><widget class="QPushButton" name="pushButton_11"><property name="text"><string>=</string></property></widget></item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
