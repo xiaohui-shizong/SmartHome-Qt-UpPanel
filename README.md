@@ -17,12 +17,16 @@
 ## 运行截图
 1. 登录界面
 <img width="798" height="517" alt="屏幕截图 2026-07-18 184406" src="https://github.com/user-attachments/assets/b85bbc5a-1fb9-4ba9-bad8-2c9f0a16aebc" />
-2. 智能硬件控制页面
+
+2. 智能硬件控制页
 <img width="817" height="557" alt="屏幕截图 2026-07-18 184509" src="https://github.com/user-attachments/assets/62faad78-411e-4c4b-8de5-75c27d55ec81" />
+
 3. MQTT物联网通信页面
 <img width="818" height="556" alt="屏幕截图 2026-07-18 184558" src="https://github.com/user-attachments/assets/6ce287bf-9ba8-4ce1-8945-38f80146b6d2" />
+
 4. AI智能对话页面
 <img width="820" height="552" alt="屏幕截图 2026-07-18 184855" src="https://github.com/user-attachments/assets/0b3eac60-00b8-4be2-8d70-3371dbd39f94" />
+
 5. 自定义虚拟键盘
 <img width="850" height="198" alt="屏幕截图 2026-07-18 184937" src="https://github.com/user-attachments/assets/d27c9db1-0216-4fd5-8417-54b5007a79b6" />
 
